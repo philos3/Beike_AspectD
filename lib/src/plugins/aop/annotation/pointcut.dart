@@ -1,5 +1,3 @@
-// @dart=2.8
-
 /// Object carrying callsite information and methods which can enable you to
 /// call the original implementation.
 @pragma('vm:entry-point')
@@ -10,7 +8,7 @@ class PointCut {
       this.positionalParams, this.namedParams, this.members, this.annotations);
 
   static PointCut pointCut() {
-    return PointCut(null, null, null, null, null, null, null, null);
+    return PointCut({}, '', '', '', [], {}, {}, {});
   }
 
   /// Source infomation like file, linenum, etc for a call.
@@ -42,7 +40,7 @@ class PointCut {
   /// the method body is generated dynamically when being transformed in
   /// compile time.
   @pragma('vm:entry-point')
-  Object proceed() {
+  Object? proceed() {
     return null;
   }
 }

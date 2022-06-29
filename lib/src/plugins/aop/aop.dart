@@ -1,4 +1,3 @@
-// @dart=2.8
 
 export 'annotation/aspect.dart';
 export 'annotation/call.dart';
